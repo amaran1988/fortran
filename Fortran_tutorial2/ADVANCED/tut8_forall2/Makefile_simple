@@ -1,0 +1,19 @@
+#The simplest version of a make file
+
+
+# This line produces the executable
+tut8.exe: gauss_mod.o tut8.o
+	gfortran gauss_mod.o tut8.o -o tut8.exe
+
+# This line produces the main object file
+tut8.o: tut8.f90 gauss_mod.o
+	gfortran -c tut8.f90
+
+
+# This line produces the module 
+gauss_mod.o: gauss_mod.f90
+	gfortran -c gauss_mod.f90
+
+# This line cleans the previous results
+clean:
+	rm -rf *.o *.mod *.exe *~

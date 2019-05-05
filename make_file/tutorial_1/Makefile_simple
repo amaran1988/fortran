@@ -1,0 +1,13 @@
+# The simplest version of make file for this operation
+
+tut3.exe: tut3.o maths_mod2.o
+	gfortran tut3.o maths_mod2.o -o tut3.exe
+
+tut3.o: tut3.f90 maths_mod2.o
+	gfortran -c tut3.f90
+
+maths_mod2.o: maths_mod2.f90
+	gfortran -c maths_mod2.f90
+
+clean:
+	rm *.o *.exe *.mod

@@ -1,0 +1,25 @@
+! You can write fortran comments
+! always start with an & and list1
+! namelist names and variables can be in lowercase
+! if fortran 77 is used then use uppercase always
+
+&list1
+
+    year          =     1990
+    
+    ! Can add comments in between lines too
+    
+    
+    MONTH         =     "November"
+    AGE           =     29
+    PIZZA_COST    =     1200.50 
+    STUDENT       =     .true.
+    TEST_SCORE    =     45.67,67.65,78.43,89.56,90.34,98.67,87.43,
+                        76.32,65.45,23.67  ! breaking lines is accepted   
+    MY_NAME       =     "Amaran"
+    RPI           =     (5.8,6.5)
+    DAY           =     "Monday"
+    EYE_COLOR     =     "Brown"
+
+! You can either use a "/" or "&end" to terminate the namelist     
+/
